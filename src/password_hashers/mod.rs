@@ -1,21 +1,3 @@
-use cas_lib::password_hashers::{argon2::CASArgon, cas_password_hasher::CASPasswordHasher};
-use pyo3::prelude::*;
-
-#[pyfunction]
-fn hash(password_to_hash: String) -> String {
-    let result = CASArgon::hash_password(password_to_hash);
-    result
-}
-
-#[pyfunction]
-fn verify_password(hashed_password: String, password_to_verify: String,) -> bool {
-    let result = CASArgon::verify_password(hashed_password, password_to_verify);
-    result
-}
-
-#[pymodule]
-pub fn argon2(m: &Bound<'_, PyModule>) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(hash, m)?)?;
-    m.add_function(wrap_pyfunction!(verify_password, m)?)?;
-    Ok(())
-}
+pub mod argon2;
+pub mod bcrypt;
+pub mod scrypt;
