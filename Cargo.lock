@@ -177,7 +177,7 @@ dependencies = [
 
 [[package]]
 name = "cas-python-sdk"
-version = "0.1.5"
+version = "0.1.6"
 dependencies = [
  "cas-lib",
  "pyo3",
