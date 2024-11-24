@@ -1,0 +1,13 @@
+[package]
+name = "cas-python-sdk"
+version = "0.1.5"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "cas_python_sdk"
+crate-type = ["cdylib"]
+
+[dependencies]
+cas-lib = "0.2.4"
+pyo3 = "0.22.0"
