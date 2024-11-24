@@ -33,4 +33,4 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.TOKEN }}
         run: |
           maturin build --release
-          twine upload /target/wheels/*
+          twine upload target/wheels/*
