@@ -10,4 +10,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 cas-lib = "0.2.4"
-pyo3 = "0.22.0"
+pyo3 = "0.24.1"
